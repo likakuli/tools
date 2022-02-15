@@ -1,0 +1,14 @@
+language:
+  - go
+
+go:
+  - "1.17.x"
+
+branches:
+  only:
+    - master
+
+script:
+  - make vet
+  - make fmt-check
+  - make test
