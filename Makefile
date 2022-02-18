@@ -18,7 +18,7 @@ BRANCH := master
 endif
 
 .PHONY: test
-test:
+test: fmt-check vet
 	echo "mode: count" > coverage.out
 	for d in $(TESTFOLDER); do \
 		$(GO) test -tags $(TESTTAGS) -v -covermode=count -coverprofile=profile.out $$d > tmp.out; \
