@@ -19,7 +19,7 @@ endif
 
 .PHONY: test
 test: fmt-check vet
-	echo "mode: count" > coverage.out
+	echo "mode: count" > coverage.xml
 	for d in $(TESTFOLDER); do \
 		$(GO) test -tags $(TESTTAGS) -v -covermode=count -coverprofile=profile.out $$d > tmp.out; \
 		cat tmp.out; \
@@ -34,7 +34,7 @@ test: fmt-check vet
 			exit 1; \
 		fi; \
 		if [ -f profile.out ]; then \
-			cat profile.out | grep -v "mode:" >> coverage.out; \
+			cat profile.out | grep -v "mode:" >> coverage.xml; \
 			rm profile.out; \
 		fi; \
 	done
