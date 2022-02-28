@@ -4,6 +4,7 @@ on:
   # Run this workflow every time a new commit pushed to upstream/fork repository.
   # Run workflow on fork repository will help contributors find and resolve issues before sending a PR.
   push:
+    branches: [ master, feature_githubicon ]
 #  pull_request:
 jobs:
 #  golangci:
