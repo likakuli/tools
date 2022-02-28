@@ -1,5 +1,5 @@
 package tools
 
-func Foo(){
-	
+func Foo() {
+
 }
