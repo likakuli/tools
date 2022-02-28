@@ -84,6 +84,6 @@ jobs:
 #      - name: make test
 #        run: make test
       - name: Run coverage
-        run: go test -race -coverprofile=coverage.out -covermode=atomic
+        run: ./script/test.sh
       - name: Upload coverage to Codecov
         run: bash <(curl -s https://codecov.io/bash)
