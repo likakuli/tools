@@ -1,4 +1,4 @@
-name: tools
+name: build
 
 on:
   # Run this workflow every time a new commit pushed to upstream/fork repository.
